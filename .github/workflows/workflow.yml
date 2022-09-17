@@ -26,6 +26,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./udagram-api-user
+          file: ./udagram-api-user/Dockerfile
           push: true
           tags: kwamito/udagram-user:latest
 
@@ -35,6 +36,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./udagram-api-feed
+          file: ./udagram-api-feed/Dockerfile
           push: true
           tags: kwamito/udagram-feed:latest
 
@@ -44,5 +46,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./udagram-frontend
+          file: ./udagram-frontend/Dockerfile
           push: true
           tags: kwamito/udagram-frontend:latest
