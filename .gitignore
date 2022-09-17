@@ -40,3 +40,10 @@ venv/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+set_env.sh
+vpc-cni-ipv6-policy.json
+node-role-trust-relationship.json
+eks-cluster-role-trust-policy.json
+env-configmap.yaml
+env-secret.yaml
+aws-secret.yaml
