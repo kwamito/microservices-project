@@ -25,6 +25,8 @@ jobs:
         name: Build and push user api
         uses: docker/build-push-action@v3
         with:
+          run: echo {{defaultContext}}; here o
+          context: "{{defaultContext}}/udagram-api-user"
           push: true
           tags: kwamito/udagram-user:latest
 
@@ -33,6 +35,8 @@ jobs:
         name: Build and push feed api
         uses: docker/build-push-action@v3
         with:
+          run: echo {{defaultContext}}
+          context: "{{defaultContext}}/udagram-api-feed"
           push: true
           tags: kwamito/udagram-feed:latest
 
@@ -41,5 +45,6 @@ jobs:
         name: Build and push frontend
         uses: docker/build-push-action@v3
         with:
+          context: "{{defaultContext}}/udagram-frontend"
           push: true
           tags: kwamito/udagram-frontend:latest
