@@ -25,8 +25,8 @@ jobs:
         name: Build and push user api
         uses: docker/build-push-action@v3
         with:
-          context: ./udagram-api-user
-          file: ./udagram-api-user/Dockerfile
+          context: "{{defaultContext}}:udagram-api-user"
+          # file: ./udagram-api-user/Dockerfile
           push: true
           tags: kwamito/udagram-user:latest
 
