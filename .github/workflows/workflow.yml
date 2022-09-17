@@ -35,7 +35,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: "{{defaultContext}}:udagram-api-feed"
-          file: ./udagram-api-feed/Dockerfile
           push: true
           tags: kwamito/udagram-feed:latest
 
@@ -45,6 +44,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: "{{defaultContext}}:udagram-frontend"
-          file: ./udagram-frontend/Dockerfile
           push: true
           tags: kwamito/udagram-frontend:latest
