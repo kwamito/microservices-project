@@ -19,3 +19,9 @@ spec:
         image: kwamito/udagram-frontend
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: "2"
+            memory: "128Mi"
+          requests:
+            cpu: "0.5"
